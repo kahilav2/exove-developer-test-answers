@@ -1,8 +1,8 @@
 :root {
-    --maxwidth: 960px;
-    --content-width: calc(960px - 2rem);
-    --article-area-width: calc(var(--content-width) / 3);
-    --article-box-width: calc(var(var(--article-area-width) - 1 rem));
+    --content-width: 960px;
+    --content-box-inner-width: calc(var(--content-width) - 2rem);
+    --single-article-width: calc(var(--content-box-inner-width) / 3);
+    --article-box-inner-width: calc(var(--single-article-width) - 1rem);
 }
 
 body {
@@ -21,14 +21,15 @@ h1 {
 .article-list {
     display: flex;
     flex-flow: wrap;
-    max-width: 960px;
-    min-width: calc((960px - 2rem)/3 * 2);
+    /* TODO: this is wrong but works */
+    max-width: calc(var(--single-article-width) * 3); 
+    min-width: calc(var(--single-article-width) * 2);
 }
 
 .article {
     box-sizing: border-box;
     padding: 1rem;
-    width: calc((960px - 2rem)/3 - 1rem);
+    width: var(--article-box-inner-width);
     margin-right: 1rem;
     margin-bottom: 1rem;
     background-color: #eee;
