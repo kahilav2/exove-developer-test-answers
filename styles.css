@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+header {
+    margin-bottom: 1rem;
+}
+section {
+    margin-bottom: 1rem;
+}
+header {
+    background-color: #eee;
+}
+h1 {
+    padding-left: 2rem;
+}
+.article-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 960px) {
+    body {
+        background-color: red;
+    }
+}
+.article {
+    box-sizing: border-box;
+    padding: 1rem;
+    width: 32%;
+    background-color: #eee;
+}
+footer {
+    padding: 1rem;
+    background-color: #eee;
+}
